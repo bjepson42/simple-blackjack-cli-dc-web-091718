@@ -68,10 +68,9 @@ def runner
   handTotal = 0
   welcome()
   handTotal = initial_round()
-  if handTotal < 21
-  hit?(handTotal)
+  until handTotal > 21
+  handTotal = hit?(handTotal)
   display_card_total(handTotal)
-else
+  end
   end_game(handTotal)
-end
 end
